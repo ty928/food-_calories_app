@@ -74,7 +74,7 @@ if __name__ == '__main__':
         need_calories = (10 * weight * 0.4536 + 6.25 * height *30.48 - 5 * age - 161) * 1.2
 
 
-    nix = Nutritionix(app_id="8bb7964a", api_key="7df918b6e9c42d80527477223d2fd580")
+    nix = Nutritionix(app_id="", api_key="")
 
     obj = nix.search().nxql(
         filters={
