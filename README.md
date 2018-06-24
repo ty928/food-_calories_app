@@ -1,10 +1,10 @@
 # Installation
-## #pip install nutritionix
-## Others please reference to pip install -r requirements.txt
+### #pip install nutritionix
+### Others please reference to pip install -r requirements.txt
 
 # Config
-## You'll need an api key and app id which is tied to a developer account at https://developer.nutritionix.com
-## You may provide these parameters in your code or with the environment variables NIX_APP_ID & NIX_API_KEY
+### You'll need an api key and app id which is tied to a developer account at https://developer.nutritionix.com
+### You may provide these parameters in your code or with the environment variables NIX_APP_ID & NIX_API_KEY
 
 # Usage
 ## Instantiate
