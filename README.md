@@ -3,7 +3,16 @@ Take a user input information of age, gender, weight and height and output food 
 ## Installation
  #pip install nutritionix
  
- Others please reference to pip install -r requirements.txt
+ #Pipenv on Mac or Windows:
+pipenv install -r requirements.txt
+
+#Homebrew-installed Python 3.x on Mac OS:
+pip3 install -r requirements.txt
+
+#All others:
+pip install -r requirements.txt
+
+Others please reference to pip install -r requirements.txt
 
 ## Setup
 ### Environment Variables
