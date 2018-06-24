@@ -6,7 +6,7 @@ import sys
 
 #from app.nu import write_prices_to_file
 sys.path.append('./app/')
-from nu import write_prices_to_file
+from nutritions import write_prices_to_file
 
 
 def test_write_prices_to_file(daily_food):
