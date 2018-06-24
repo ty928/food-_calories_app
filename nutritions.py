@@ -9,7 +9,7 @@ import datetime
 
 
 
-nix = Nutritionix(app_id="8bb7964a", api_key="7df918b6e9c42d80527477223d2fd580")
+nix = Nutritionix(app_id="your_app_id", api_key="your_app_key")
 
 obj = nix.search().nxql(
     filters={
