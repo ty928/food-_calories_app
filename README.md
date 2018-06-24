@@ -1,4 +1,4 @@
-# Food Calories recommendation APP
+# Food Calories Recommendation APP
 Take a user input information of age, gender, weight and height and output food recommendation daily to help user have healthy and various food.
 ## Installation
  #pip install nutritionix
