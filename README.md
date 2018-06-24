@@ -41,4 +41,5 @@ nix = Nutritionix()
 ## Testing
 Run tests:
 
-pytest
+python tests\food_test.py
+
