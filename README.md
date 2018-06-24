@@ -16,6 +16,6 @@ from nutritionix import Nutritionix
 nix = Nutritionix()
 
 # Run the application
-### 1.Navigate to the directory in which you saved the file.
-### 2.To run the program, issue the following command: python nutritions.py
-### 3.Note: you must use Python3 to run this program.
+ 1.Navigate to the directory in which you saved the file.
+ 2.To run the program, issue the following command: python nutritions.py
+ 3.Note: you must use Python3 to run this program.
