@@ -7,13 +7,53 @@ import pdb
 import requests
 import datetime
 
-#CAPTURE USER INPUTS
+while True:
+    gender = input("Is a male or female: ").lower()
+    if gender not in "male" "female":
+        print("Check Your Spelling. Expecting 'Male' or 'Female'")
+        continue
+    else:
+        break
 
-gender = input("Is a male or female: ")
-weight = int(input("Please input your weight(in pond): "))
-height = float(input("Please input your height(in feet): "))
-age = int(input("Please input your age(eg.25): "))
+while True:
+    try:
+        weight = int(input("Please input your weight(in pond): "))
+    except ValueError:
+        print("Sorry, Please Input Number.")
+        continue
+    if weight < 0:
+            print("Sorry, your response must not be negative.")
+            continue
+    else:
+        break
 
+while True:
+    try:
+        height = float(input("Please input your height(in feet): "))
+    except ValueError:
+        print("Sorry, Please Input Number.")
+        continue
+    if height < 0:
+            print("Sorry, your response must not be negative.")
+            continue
+    else:
+        break
+
+while True:
+    try:
+        age = int(input("Please input your age(eg.25): "))
+    except ValueError:
+        print("Sorry, Please Input Integer.")
+        continue
+    if age < 0:
+            print("Sorry, your response must not be negative.")
+            continue
+    else:
+        break
+
+print("-------------------------------------------------")
+print("Today is ", datetime.datetime.now().strftime("%Y-%B-%d"))
+print("The food recommened to you: ")
 
 if gender == "male":
     need_calories = (10 * weight * 0.4536 + 6.25 * height *30.48 - 5 * age + 5) * 1.2
@@ -21,13 +61,7 @@ elif gender == "female":
     need_calories = (10 * weight * 0.4536 + 6.25 * height *30.48 - 5 * age - 161) * 1.2
 
 
-print("-------------------------------------------------")
-print("Today is ", datetime.datetime.now().strftime("%Y-%B-%d"))
-print("The food recommened to you: ")
-
-
-#retrive data from API
-nix = Nutritionix(app_id="8bb7964a", api_key="7df918b6e9c42d80527477223d2fd580")
+nix = Nutritionix(app_id="", api_key="")
 
 obj = nix.search().nxql(
     filters={
@@ -61,7 +95,7 @@ for result in results:
 print("-------------------------------------------------")
 print("HAVE A NICE DAY. ENJOY YOUR MEAL")
 
-#save to CSV
+
 def write_prices_to_file(hits=[], filename="data/food.csv"):
     csv_filepath = os.path.join(os.path.dirname(__file__), filename)
     with open(csv_filepath, "w") as csv_file:
