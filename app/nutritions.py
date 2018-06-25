@@ -7,12 +7,12 @@ import pdb
 import requests
 import datetime
 
-def write_prices_to_file(hits=[], filename="data/food.csv"):
+def write_prices_to_file(foods = [], filename="data/food.csv"):
     csv_filepath = os.path.join(os.path.dirname(__file__), "..", filename)
     with open(csv_filepath, "w") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=["item_name","calories"])
         writer.writeheader()
-        for d in hits:
+        for d in foods:
             row = {
                 "item_name": d["item_name"], # change attribute name to match project requirements
                 "calories": d["calories"]
@@ -74,7 +74,7 @@ if __name__ == '__main__':
         need_calories = (10 * weight * 0.4536 + 6.25 * height *30.48 - 5 * age - 161) * 1.2
 
 
-    nix = Nutritionix(app_id="", api_key="")
+    nix = Nutritionix(app_id="8bb7964a", api_key="7df918b6e9c42d80527477223d2fd580")
 
     obj = nix.search().nxql(
         filters={
@@ -88,10 +88,10 @@ if __name__ == '__main__':
 
 
     results = []
-    for hit in obj['hits']:
+    for food in obj['hits']:
         result = {
-                "item_name": hit['fields']['item_name'],
-                "calories": hit['fields']['nf_calories']
+                "item_name": food['fields']['item_name'],
+                "calories": food['fields']['nf_calories']
         }
         results.append(result)
 
@@ -109,4 +109,4 @@ if __name__ == '__main__':
 
     food_calories = filter_results
 
-    write_prices_to_file(hits= food_calories, filename="data/food.csv")
+    write_prices_to_file(foods = food_calories, filename="data/food.csv")
