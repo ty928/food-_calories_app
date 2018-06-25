@@ -1,6 +1,8 @@
 # Food Calories Recommendation APP
-Take a user input information of age, gender, weight and height and output food recommendation daily to help user have healthy and various food.
+Take a user input information of age, gender, weight and height and output food recommendation daily to help user have healthy and various food according to report of "medicalnewstoday". The recommendation calories people should take is up to BMR x 1.2 perday. This app recommendes food to people based on this theory to help people keep healthy.
+
 ## Installation
+Please install nutritionix:
  #pip install nutritionix
  
  #Pipenv on Mac or Windows:
@@ -40,5 +42,5 @@ nix = Nutritionix()
 ## Testing
 Run tests:
 
-python tests\food_test.py
+pytest
 
