@@ -64,9 +64,9 @@ if __name__ == '__main__':
         else:
             break
 
-    print("-------------------------------------------------")
+    print("----------------------------------------------------------------")
     print("Today is ", datetime.datetime.now().strftime("%Y-%B-%d"))
-    print("The food recommened to you: ")
+    print("Today's Food For You: ")
 
     if gender == "male":
         need_calories = (10 * weight * 0.4536 + 6.25 * height *30.48 - 5 * age + 5) * 1.2
@@ -74,7 +74,7 @@ if __name__ == '__main__':
         need_calories = (10 * weight * 0.4536 + 6.25 * height *30.48 - 5 * age - 161) * 1.2
 
 
-    nix = Nutritionix(app_id="Your_app_id", api_key="Your_api_key")
+    nix = Nutritionix(app_id="your_app_id", api_key="your_api_key")
 
     obj = nix.search().nxql(
         filters={
@@ -104,8 +104,8 @@ if __name__ == '__main__':
             filter_results.append(result)
             print("Food Name: " + result['item_name'] + "........" + "Calroies: " + str(result['calories']))
 
-    print("-------------------------------------------------")
-    print("HAVE A NICE DAY. ENJOY YOUR MEAL")
+    print("----------------------------------------------------------------")
+    print("Have A Nice Day. Enjoy Your Meal.")
 
     food_calories = filter_results
 
