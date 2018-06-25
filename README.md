@@ -33,10 +33,9 @@ nix = Nutritionix()
 ## Usage
  1.Navigate to the directory in which you saved the file.
  
- 2.To run the program, issue the following command: python nutritions.py
+ 2.To run the program, issue the following command: python app\nutritions.py
  
  3.Note: you must use Python3 to run this program.
- Testing
 
 ## Testing
 Run tests:
